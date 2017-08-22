@@ -7,6 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  // this.route('index', { path: '/' }) // implied
+  this.route('orders');
+  this.route('polls', function() {
+    this.route('poll', { path: '/:poll_id' });
+  });
 });
 
 export default Router;

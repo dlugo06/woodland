@@ -1,0 +1,10 @@
+{{outlet}}
+
+<h4>Check out previous questions:</h4>
+<ul>
+  {{#each model as |poll|}}
+    {{#link-to 'polls.poll' poll}}
+      <li>{{poll.question}}</li>
+    {{/link-to}}
+  {{/each}}
+</ul>
